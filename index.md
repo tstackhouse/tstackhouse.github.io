@@ -1,7 +1,6 @@
 ---
-layout: page
-title: Tim Stackhouse
-tagline: Assorted JavaScript and Linux Nerdery
+layout: default
+front: true
 ---
 {% include JB/setup %}
 

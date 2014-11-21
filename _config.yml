@@ -11,8 +11,8 @@ markdown: kramdown
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Tim Stackhouse
-tagline: Full Stack Developer
+title : Bloghouse
+tagline : "A blog about nothing in particular"
 author :
   name : Tim Stackhouse
   email : tim@tstackhouse.com

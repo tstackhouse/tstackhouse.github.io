@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
 
-    <title>{{ page.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="{{ ASSET_PATH }}/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
+    <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet">
+    <link href="{{ BASE_PATH }}/assets/css/styles.css" rel="stylesheet">
+
     <!--[if lt IE 9]>
       <script src="{{ ASSET_PATH }}/resources/respond/Respond.min.js"></script>
     <![endif]-->
@@ -20,7 +22,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -29,7 +31,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          <a class="navbar-brand" href="{{ HOME_PATH }}">Home</a>
         </div>
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -41,20 +43,41 @@
         </div>
       </div>
     </nav>
-    <div class="container">
-      {{ content }}
-      <hr>
-      <footer>
-        <p>
-          &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          <span class="pull-right text-muted">
-            powered by
-            <a href="http://dbtek.github.io/jekyll-bootstrap-3" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll-Bootstrap-3</a>
-            and <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap 3.0.3</a>
-          </span>
-        </p>
-      </footer>
-    </div>
+    <main>
+      {% if page.front %}
+      <header class="container">
+        <div class="jumbotron masthead">
+          <h1>{{ site.title }}</h1>
+          <p>
+            {{ site.tagline }}
+          </p>
+        </div>
+      </header>
+      {% else %}
+      <header class="masthead">
+        <div class="container">
+          <h1>{{ site.title }}</h1>
+          <p>
+            {{ site.tagline }}
+          </p>
+        </div>
+      </header>
+      {% endif %}
+
+      <section class="container">
+        {{ content }}
+      </section>
+    </main>
+    <footer>
+      <p class="container">
+        &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+        <span class="pull-right text-muted">
+          powered by
+          <a href="http://dbtek.github.io/jekyll-bootstrap-3" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll-Bootstrap-3</a>
+          and <a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap 3.0.3</a> hosted on <a href="http://www.github.com">GitHub</a>
+        </span>
+      </p>
+    </footer>
 
     {% include JB/analytics %}
     <script src="{{ ASSET_PATH }}/resources/jquery/jquery.min.js"></script>
