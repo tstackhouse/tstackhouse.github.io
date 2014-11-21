@@ -1,0 +1,84 @@
+// ===== Variables ====================================================================================================
+@page-bg: #2c3e50;
+@main-body-bg: white;
+@masthead-base: #ecf0f1;
+
+@page-text: contrast(@page-bg);
+@page-text-muted: overlay(@page-bg, @page-text);
+
+@page-links: average(@page-text, @page-text-muted);
+@page-links-hover: average(@page-links, @page-text);
+// ===== End Variables ================================================================================================
+
+
+
+// ===== Mixins =======================================================================================================
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+// ===== End Mixins ===================================================================================================
+
+
+
+// ===== Main Styles ==================================================================================================
+body {
+	background-color: @page-bg;
+}
+.navbar {
+	margin-bottom: 0;
+	background-color: @page-bg;
+}
+.navbar-nav>li>a {
+	&:hover,
+	&:focus {
+		background-color: @page-text-muted;
+	}
+}
+.navbar, footer {
+	color: @page-text;
+	a {
+		color: @page-links;
+		&:hover {
+			color: @page-links-hover;
+		}
+	}
+	.text-muted {
+		color: @page-text-muted;
+	}
+}
+main {
+	background-color: @main-body-bg;
+	padding-bottom: 60px;
+}
+.masthead {
+	// .gradient(@masthead-base, spin(@masthead-base, 15));
+	background-color: @masthead-base;
+
+	color: contrast(@masthead-base);
+
+	header & {
+		margin-top: 20px;
+		h1 {
+			margin-top: 0;
+		}
+	}
+
+	header& {
+		padding-bottom: 20px;
+		border-bottom: 1px solid contrast(@masthead-base, darken(@masthead-base, 5%), lighten(@masthead-base, 10%), 15%);
+	}
+}
+
+footer {
+	margin-top: 15px;
+}
+// ===== Main Styles ==================================================================================================
+
+
+
+// ===== End of File styles.less ======================================================================================
