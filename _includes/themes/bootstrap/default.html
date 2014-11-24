@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAChUlEQVR4nL3XW4hNURgH8J9DRCiXkETCA/FASu5CKNKIUsoDD0huDy4PvIlIYSbyoJRyGQ+SeVOe3JKSS84o8jJSYl5ca9zGw9rDtmfvc/aZc8y/dmev/X3f+v5rrW/91zo9Js+r082Yi5OYhneFbkw8GldwK0oObb26IXE/7MMe9E3Yiv+bwDocxagM+38jMB31mFXGr7nWNTAC5/AgJfn7FP9irQj0Edb5BTagR8zWjks6rz81moE6FHEEAxK2NmzDTPRP2FrwqRoCk3ET1zAuxd6KpViNsSn2ZugKgSE4jcdYlOHzUhj1GizM8ClWSqAXtkedb0XPDL87UfIFwvRnoSICS/AEDRhUwq8RizFRmKVSyLUE49GEG5hUxvewIDzDcBW98xDIEqKBOICdOTr6ji3C/u+H6xGJUmjBpzQCBWEfH8LwMp3AB6HQbkbtc5iaI67Y8RInMEeQz2md3NPRguV4FrX3Y23O2OaOl4JwUDTidgXJH2JGLPlKHMwZS2IGbkkXiiw0CcX2JWpPwgX/ym9uAgU8rSCwAatiyQdHhJISXA7P4wTqMFsYRVtGwC/sEnbFr+hbT+GGkybDpfBnB3QQgHtYL9TDXryKBXwVRl2f6Oi4IDqVohhvJIWoFccwAcuE4pwvTHMcG7GjC8k7EcgSonZB/W6k2GbhTBeTE9uCVH4ajpJPZkuh5BKUw27h2tVVtKtyBrKW7EfO+Nf4XA2BNPzECkFFz/qrEWkoJj/UgsBeoVgfYRNGCheXZym+NSdwXtCDOD7iFKZgHi7jW2S7m+ygmj8m97G5jM/t6BmKMcIhVhWBj9HvG0Eds6Q7idbo6YRKCZwQzoKLeFthbCp+A+ohgch1tdBsAAAAAElFTkSuQmCC" type="image/png" />
 
     <link href="{{ ASSET_PATH }}/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet">
     <link href="{{ BASE_PATH }}/assets/css/styles.css" rel="stylesheet">
 
@@ -66,9 +67,16 @@
       </header>
       {% endif %}
 
-      <section class="container">
-        {{ content }}
-      </section>
+      <div class="container">
+				<div class="row">
+					<section class="col-md-8">
+						{{ content }}
+					</section>
+					<aside class="sidebar col-md-4">
+						{% markdown sidebar.md %}
+					</aside>
+				</div>
+      </div>
     </main>
     <footer>
       <p class="container">
