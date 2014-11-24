@@ -17,6 +17,3 @@ front-end UI frameworks, including working with [Bootstrap](http://getbootstrap.
 [Sass](http://sass-lang.com/) CSS preprocessors.  In the past, I've also done extensive work with
 [Drupal](http://www.drupal.org/), [ExpressionEngine](https://ellislab.com/expressionengine), and vanilla
 [PHP](http://www.php.net/).
-
-<!--- Ever since I was a teenager I've enjoyed cooking and have spent countless hours in the kitchen expirimenting with
-different techniques, exploring the flavors of various cuisines, and generally becoming acquaninted with -->
