@@ -46,27 +46,29 @@
         </div>
       </div>
     </nav>
-    <main>
-      {% if page.front %}
-      <header class="container">
+    {% if page.front %}
+    <header class="front">
+      <div class="container">
         <div class="jumbotron masthead">
           <h1>{{ site.title }}</h1>
           <p>
             {{ site.tagline }}
           </p>
         </div>
-      </header>
-      {% else %}
-      <header class="masthead">
-        <div class="container">
-          <h1>{{ site.title }}</h1>
-          <p>
-            {{ site.tagline }}
-          </p>
-        </div>
-      </header>
-      {% endif %}
+      </div>
+    </header>
+    {% else %}
+    <header class="masthead">
+      <div class="container">
+        <h1>{{ site.title }}</h1>
+        <p>
+          {{ site.tagline }}
+        </p>
+      </div>
+    </header>
+    {% endif %}
 
+    <main>
       <div class="container">
 				<div class="row">
 					<section class="col-md-8">

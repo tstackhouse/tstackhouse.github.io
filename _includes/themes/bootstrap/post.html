@@ -1,15 +1,11 @@
- <article>
-  <header class="page-header">
-    <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-    <p class="text-muted">Posted on <time datetime="page.date">{{ page.date | date_to_string }}</time></p>
+ <article class="row">
+  <header class="page-header row">
+    <h1 class="col-md-9 col-md-offset-3">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
   </header>
 
   <div class="row post-full">
-    <div class="col-md-12">
-      <div class="content">
-        {{ content }}
-      </div>
-
+    <div class="col-md-3">
+      <p class="text-muted">Posted on <time datetime="page.date">{{ page.date | date_to_string }}</time></p>
       {% unless page.categories == empty %}
         <ul class="tag_box inline">
           <li><i class="icon-folder-open"></i></li>
@@ -25,6 +21,11 @@
           {% include JB/tags_list %}
         </ul>
       {% endunless %}
+    </div>
+    <div class="col-md-9">
+      <div class="content">
+        {{ content }}
+      </div>
 
       <!-- <hr> -->
 

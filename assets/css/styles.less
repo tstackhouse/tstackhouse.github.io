@@ -54,6 +54,10 @@ body {
 		color: @page-text-muted;
 	}
 }
+.page-header {
+	margin-top: 10px;
+	border-bottom: none;
+}
 .sidebar {
 	section {
 		border-radius: 6px;
@@ -66,23 +70,27 @@ body {
 		}
 	}
 	.fa-2 {
-		font-size: 2em;		
+		font-size: 2em;
 	}
 	.fa-3 {
-		font-size: 3em;		
+		font-size: 3em;
 	}
 	.fa-4 {
-		font-size: 4em;		
+		font-size: 4em;
 	}
 	.fa-5 {
-		font-size: 5em;		
+		font-size: 5em;
 	}
 	.fa-6 {
-		font-size: 6em;		
+		font-size: 6em;
 	}
 }
-main {
+main,
+header.front {
 	background-color: @main-body-bg;
+}
+main {
+	padding-top: 30px;
 	padding-bottom: 60px;
 }
 .masthead {
@@ -96,6 +104,10 @@ main {
 		h1 {
 			margin-top: 0;
 		}
+	}
+
+	header &.jumbotron {
+		margin-bottom: 0;
 	}
 
 	header& {
