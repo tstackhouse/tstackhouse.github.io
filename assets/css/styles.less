@@ -5,6 +5,7 @@
 
 @page-text: contrast(@page-bg);
 @page-text-muted: overlay(@page-bg, @page-text);
+@page-text-muted-hover: overlay(@page-bg, @page-text-muted);
 
 @page-links: average(@page-text, @page-text-muted);
 @page-links-hover: average(@page-links, @page-text);
@@ -92,6 +93,12 @@ header.front {
 main {
 	padding-top: 30px;
 	padding-bottom: 60px;
+	a {
+		color: @page-text-muted;
+		&:hover {
+			color: @page-text-muted-hover;
+		}
+	}
 }
 .masthead {
 	// .gradient(@masthead-base, spin(@masthead-base, 15));
@@ -113,6 +120,28 @@ main {
 	header& {
 		padding-bottom: 20px;
 		border-bottom: 1px solid contrast(@masthead-base, darken(@masthead-base, 5%), lighten(@masthead-base, 10%), 15%);
+	}
+}
+
+.posts {
+	margin-bottom: 30px;
+}
+
+article {
+	.meta {
+		text-align: right;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		border-top: 2px solid @masthead-base;
+		width: 70%;
+		margin: 30px auto;
+	}
+
+	&:last-child:after {
+		display: none;
 	}
 }
 
