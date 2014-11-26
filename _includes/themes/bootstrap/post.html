@@ -4,8 +4,8 @@
   </header>
 
   <div class="row post-full">
-    <div class="col-md-3">
-      <p class="text-muted">Posted on <time datetime="page.date">{{ page.date | date_to_string }}</time></p>
+    <aside class="meta col-md-3">
+      <p class="text-muted"><time datetime="page.date">{{ page.date | date_to_string }}</time></p>
       {% unless page.categories == empty %}
         <ul class="tag_box inline">
           <li><i class="icon-folder-open"></i></li>
@@ -21,7 +21,7 @@
           {% include JB/tags_list %}
         </ul>
       {% endunless %}
-    </div>
+    </aside>
     <div class="col-md-9">
       <div class="content">
         {{ content }}

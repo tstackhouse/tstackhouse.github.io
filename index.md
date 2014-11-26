@@ -11,8 +11,8 @@ front: true
         <h2 class="col-md-9 col-md-offset-3"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
       </header>
       <div class="row">
-    		<div class="col-md-3">
-		      <p class="text-muted">Posted on <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
+    		<aside class="meta col-md-3">
+		      <p class="text-muted"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
           {% unless page.categories == empty %}
             <ul class="tag_box inline">
               <li><i class="icon-folder-open"></i></li>
@@ -28,7 +28,7 @@ front: true
               {% include JB/tags_list %}
             </ul>
           {% endunless %}
-        </div>
+        </aside>
         <div class="col-md-9">
           {{ post.content }}
         </article>
