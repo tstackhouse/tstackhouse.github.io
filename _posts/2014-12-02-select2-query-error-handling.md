@@ -15,7 +15,7 @@ problem that arose from that was the need to properly handle any varity of error
 request.  Select 2 handles this natively when using the built-it `ajax` option, but doing it with a custom `query`
 is not well documented.  Consider this example:
 
-``` js
+{% highlight javascript %}
 var collection = new MyBackboneCollection()
 
 $('#myInput').select2({
@@ -35,7 +35,7 @@ $('#myInput').select2({
     });
   },
 });
-```
+{% endhighlight %}
 
 In this smple use case, we're capturing any failures and presenting it as if no results were found, at a minimum,
 this is misleading to the user, and at worst, could be confusing if a user is expecting a result to be present.
@@ -43,7 +43,7 @@ this is misleading to the user, and at worst, could be confusing if a user is ex
 There is nothing mentioned in the documentation, however after looking at the source for the Select2, we can see
 that in the built-in implementation of the AJAX handler, the way the native error handling is triggered:
 
-``` js
+{% highlight javascript %}
 $.extend(params, {
   url: url,
   dataType: options.dataType,
@@ -65,11 +65,11 @@ $.extend(params, {
       query.callback(results);
   }
 });
-```
+{% endhighlight %}
 
 The key component being `hasError: true`.  So if we change our original example:
 
-``` js
+{% highlight javascript %}
 var collection = new MyBackboneCollection()
 
 $('#myInput').select2({
@@ -89,7 +89,7 @@ $('#myInput').select2({
     });
   },
 });
-```
+{% endhighlight %}
 
 The native error handling kicks in and we can easily imform the user that there was an error loading their search data!
 From here we can use additional parameters in the results object and the naotive `formatAjaxError` to do anything we
