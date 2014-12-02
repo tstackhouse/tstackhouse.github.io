@@ -15,7 +15,7 @@ problem that arose from that was the need to properly handle any varity of error
 request.  Select 2 handles this natively when using the built-it `ajax` option, but doing it with a custom `query`
 is not well documented.  Consider this example:
 
-~~~ javascript
+~~~ js
 var collection = new MyBackboneCollection()
 
 $('#myInput').select2({
@@ -43,7 +43,7 @@ this is misleading to the user, and at worst, could be confusing if a user is ex
 There is nothing mentioned in the documentation, however after looking at the source for the Select2, we can see
 that in the built-in implementation of the AJAX handler, the way the native error handling is triggered:
 
-~~~ javascript
+~~~ js
 $.extend(params, {
   url: url,
   dataType: options.dataType,
@@ -69,7 +69,7 @@ $.extend(params, {
 
 The key component being `hasError: true`.  So if we change our original example:
 
-~~~ javascript
+~~~ js
 var collection = new MyBackboneCollection()
 
 $('#myInput').select2({
