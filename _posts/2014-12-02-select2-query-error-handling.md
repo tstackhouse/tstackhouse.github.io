@@ -2,11 +2,11 @@
 title: Handling Errors using Select2's Custom Query Function
 layout: post
 tags:
-	- javascript
-	- jquery
-	- backbone.js
-	- select2
-	- ajax
+  - javascript
+  - jquery
+  - backbone.js
+  - select2
+  - ajax
 ---
 
 Recently I encountered an issue using [Select2][sel2]'s custom `query` feature to create a custom function to use
@@ -19,21 +19,21 @@ is not well documented.  Consider this example:
 var collection = new MyBackboneCollection()
 
 $('#myInput').select2({
-	query: function(options) {
-		collection.fetch().done(function() {
-			var data = { results: [] };
-			data.results = collection.map(function(obj) {
-				return {
-					id: obj.id,
-					text: obj.get('Name')
-				};
-			});
-			options.callback(data);
-		}).fail(function() {
-			var data = { results: [] };
-			options.callback(data);
-		});
-	},
+  query: function(options) {
+    collection.fetch().done(function() {
+      var data = { results: [] };
+      data.results = collection.map(function(obj) {
+        return {
+          id: obj.id,
+          text: obj.get('Name')
+        };
+      });
+      options.callback(data);
+    }).fail(function() {
+      var data = { results: [] };
+      options.callback(data);
+    });
+  },
 });
 ~~~
 
@@ -45,25 +45,25 @@ that in the built-in implementation of the AJAX handler, the way the native erro
 
 ~~~ javascript
 $.extend(params, {
-	url: url,
-	dataType: options.dataType,
-	data: data,
-	success: function (data) {
-			// TODO - replace query.page with query so users have access to term, page, etc.
-			// added query as third paramter to keep backwards compatibility
-			var results = options.results(data, query.page, query);
-			query.callback(results);
-	},
-	error: function(jqXHR, textStatus, errorThrown){
-			var results = {
-					hasError: true,
-					jqXHR: jqXHR,
-					textStatus: textStatus,
-					errorThrown: errorThrown,
-			};
+  url: url,
+  dataType: options.dataType,
+  data: data,
+  success: function (data) {
+      // TODO - replace query.page with query so users have access to term, page, etc.
+      // added query as third paramter to keep backwards compatibility
+      var results = options.results(data, query.page, query);
+      query.callback(results);
+  },
+  error: function(jqXHR, textStatus, errorThrown){
+      var results = {
+          hasError: true,
+          jqXHR: jqXHR,
+          textStatus: textStatus,
+          errorThrown: errorThrown,
+      };
 
-			query.callback(results);
-	}
+      query.callback(results);
+  }
 });
 ~~~
 
@@ -73,21 +73,21 @@ The key component being `hasError: true`.  So if we change our original example:
 var collection = new MyBackboneCollection()
 
 $('#myInput').select2({
-	query: function(options) {
-		collection.fetch().done(function() {
-			var data = { results: [] };
-			data.results = collection.map(function(obj) {
-				return {
-					id: obj.id,
-					text: obj.get('Name')
-				};
-			});
-			options.callback(data);
-		}).fail(function() {
-			var data = { hasError: true };
-			options.callback(data);
-		});
-	},
+  query: function(options) {
+    collection.fetch().done(function() {
+      var data = { results: [] };
+      data.results = collection.map(function(obj) {
+        return {
+          id: obj.id,
+          text: obj.get('Name')
+        };
+      });
+      options.callback(data);
+    }).fail(function() {
+      var data = { hasError: true };
+      options.callback(data);
+    });
+  },
 });
 ~~~
 
