@@ -2,6 +2,7 @@
 title: Handling Errors using Select2's Custom Query Function
 layout: post
 tags:
+  - programming
   - javascript
   - jquery
   - backbone.js
