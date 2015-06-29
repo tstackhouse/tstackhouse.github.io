@@ -18,7 +18,7 @@ front-end UI frameworks, including working with [Bootstrap](http://getbootstrap.
 [Drupal](http://www.drupal.org/), [ExpressionEngine](https://ellislab.com/expressionengine), and vanilla
 [PHP](http://www.php.net/).
 
-h2. Geeky Stuff
+## Geeky Stuff
 
 This blog is powered by [Jekyll Bootstrap 3](http://dbtek.github.io/jekyll-bootstrap-3) using
 [Twitter Bootstrap 3.0.3](http://getbootstrap.com) and hosted on [GitHub](http://www.gitbub.com)'s incredible
