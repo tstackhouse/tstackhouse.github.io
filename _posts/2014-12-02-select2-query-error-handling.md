@@ -92,7 +92,7 @@ $('#myInput').select2({
 {% endhighlight %}
 
 The native error handling kicks in and we can easily imform the user that there was an error loading their search data!
-From here we can use additional parameters in the results object and the naotive `formatAjaxError` to do anything we
+From here we can use additional parameters in the results object and the native `formatAjaxError` to do anything we
 might want to do to display a nicely formatted error.
 
 [sel2]: https://ivaynberg.github.io/select2/
