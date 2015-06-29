@@ -11,7 +11,7 @@ tags:
 
 Recently I encountered an issue using [Select2][sel2]'s custom `query` feature to create a custom function to use
 [Backbone.js][bbjs] collection objects to handle fetching and parsing data to populate a dynamic search box.  One
-problem that arose from that was the need to properly handle any varity of errors that could occur during that AJAX
+problem that arose from that was the need to properly handle any variety of errors that could occur during that AJAX
 request.  Select 2 handles this natively when using the built-it `ajax` option, but doing it with a custom `query`
 is not well documented.  Consider this example:
 
