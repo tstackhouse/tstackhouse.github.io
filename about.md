@@ -17,3 +17,10 @@ front-end UI frameworks, including working with [Bootstrap](http://getbootstrap.
 [Sass](http://sass-lang.com/) CSS preprocessors.  In the past, I've also done extensive work with
 [Drupal](http://www.drupal.org/), [ExpressionEngine](https://ellislab.com/expressionengine), and vanilla
 [PHP](http://www.php.net/).
+
+h2. Geeky Stuff
+
+This blog is powered by [Jekyll Bootstrap 3](http://dbtek.github.io/jekyll-bootstrap-3) using
+[Twitter Bootstrap 3.0.3](http://getbootstrap.com) and hosted on [GitHub](http://www.gitbub.com)'s incredible
+[GitHub Pages](https://pages.github.com/) platform.  The entire
+[source code](https://github.com/tstackhouse/tstackhouse.github.io) for this site is available on GitHub as well.
