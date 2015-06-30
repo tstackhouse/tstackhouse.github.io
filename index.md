@@ -13,18 +13,18 @@ front: true
       <div class="row">
     		<aside class="meta col-md-3">
 		      <p class="text-muted"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
-          {% unless page.categories == empty %}
+          {% unless post.categories == empty %}
             <ul class="tag_box inline">
               <li><i class="icon-folder-open"></i></li>
-              {% assign categories_list = page.categories %}
+              {% assign categories_list = post.categories %}
               {% include JB/categories_list %}
             </ul>
           {% endunless %}
 
-          {% unless page.tags == empty %}
+          {% unless post.tags == empty %}
             <ul class="tag_box inline">
               <li><i class="icon-tags"></i></li>
-              {% assign tags_list = page.tags %}
+              {% assign tags_list = post.tags %}
               {% include JB/tags_list %}
             </ul>
           {% endunless %}
