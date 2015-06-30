@@ -30,7 +30,12 @@ front: true
           {% endunless %}
         </aside>
         <div class="col-md-9">
-          {{ post.content }}
+          {{ post.excerpt }}
+          {% unless post.excerpt == post.content %}
+            <p>
+              <a href="{{ BASE_PATH }}{{ post.url }}">Read more...</a>
+            </p>
+          {% endunless %}
         </article>
       </div>
     </article>
