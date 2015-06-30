@@ -9,6 +9,8 @@
 
 @page-links: average(@page-text, @page-text-muted);
 @page-links-hover: average(@page-links, @page-text);
+
+@accent: lighten(saturate(spin(@page-bg, 180), 100%), 30%);
 // ===== End Variables ================================================================================================
 
 
@@ -21,6 +23,15 @@
 	background: -moz-linear-gradient(top, @startColor, @endColor);
 	background: -ms-linear-gradient(top, @startColor, @endColor);
 	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.masthead-bg-icon {
+	font-family: FontAwesome;
+	content: '\f1d8';
+	position: absolute;
+	right: -10px;
+	bottom: -140px;
+	font-size: 210px;
+	color: fade(@accent, 40%);
 }
 // ===== End Mixins ===================================================================================================
 
@@ -108,8 +119,13 @@ main {
 
 	header & {
 		margin-top: 20px;
+		position: relative;
+		overflow: hidden;
 		h1 {
 			margin-top: 0;
+		}
+		&:after {
+			.masthead-bg-icon;
 		}
 	}
 
@@ -118,9 +134,23 @@ main {
 	}
 
 	header& {
-		padding-bottom: 20px;
 		border-bottom: 1px solid contrast(@masthead-base, darken(@masthead-base, 5%), lighten(@masthead-base, 10%), 15%);
+		overflow: hidden;
+		padding-bottom: 20px;
+		.container {
+			position: relative;
+			&:after {
+				.masthead-bg-icon;
+				right: -3px;
+				bottom: -80px;
+				font-size: 140px;
+			}
+		}
 	}
+}
+
+.tag_box.inline li {
+  float: right;
 }
 
 .posts {
@@ -128,8 +158,12 @@ main {
 }
 
 article {
+	text-align: justify;
+
 	.meta {
 		text-align: right;
+		border-right: 1px solid @accent;
+		padding-right: 13px;
 	}
 
 	&:after {
