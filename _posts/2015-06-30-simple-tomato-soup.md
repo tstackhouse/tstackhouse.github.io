@@ -8,6 +8,8 @@ tags:
   - homestyle
 ---
 
+![img_20150630_192458](https://cloud.githubusercontent.com/assets/149909/8486126/8a07ccd8-20d0-11e5-812d-7aa7b5ecbff1.jpg)
+
 I keep a fairly simple weekday dinner routine to keep time and costs down during the week and letting me have some
 downtime.  In that spirit, every Tuesday in our house is grilled cheese and tomato soup night.  It's simple, quick to
 prepare, and (relatively) healthy, provided one goes easy on the butter. That said, as someone who has actively been
