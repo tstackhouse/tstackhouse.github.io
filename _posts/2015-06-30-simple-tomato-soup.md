@@ -19,12 +19,12 @@ childhood, and made with milk it's creamy and oh so satisfying.
 
 Well, a couple Tuesdays ago I went to make dinner and lo my usual stash of a few cans of Campbell's was gone!  I had
 forgotten to restock and was left with the possibility of no soup with our sandwiches.  Necessity being what it is, I
-pulled out a few ingredents and hit pu the internet to build a quick recipe for my own homemade tomato soup, and this
-was the result.  It's creamy buy not heavy, and distinctly tomato-y, and made right, it can even be vegan!
+pulled out a few ingredents and hit up the internet to build a quick recipe for my own homemade tomato soup, and this
+was the result.  It's creamy buy not heavy, distinctly tomato-y, and made right, it can even be vegan!
 
 The first time I made this I didn't add any baking soda, and it was noticibly acidic, even after adding some sugar to
 attempt to balance the flavor a bit.  The next time I used the baking soda and it brought it right in line.  The amount
-can be varies to your taste.
+can be varied to your taste.
 
 <!--more-->
 
