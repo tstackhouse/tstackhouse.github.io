@@ -1,5 +1,6 @@
 ---
 layout: post
+description: A quick and easy recipe for homemade tomato soup born out of necessity.
 tags:
   - cooking
   - soup
